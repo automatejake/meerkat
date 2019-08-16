@@ -14,7 +14,7 @@ class GameRoom extends Component {
     super(props);
     this.state = { 
                    foundPlayers: 0,
-                   endpoint: "http://127.0.0.1:4001",
+                   endpoint: "https://meerkatapi.automatejake.com",
                    gameId: null,
                    status: "waiting",
                    timer: 20,
