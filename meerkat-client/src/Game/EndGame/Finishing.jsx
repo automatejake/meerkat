@@ -17,6 +17,9 @@ class Finishing extends Component {
             </Helmet>
             <Loader active inline='centered' size='massive'></Loader>
             Hold your Horses Trooper
+
+
+
         </Container>
       )
   }

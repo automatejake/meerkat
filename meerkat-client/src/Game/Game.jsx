@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Container, Dimmer, Form, Grid, Header, Progress, TextArea  } from 'semantic-ui-react'
+import { Button, Dimmer, Form, Grid, Header, Progress, TextArea  } from 'semantic-ui-react'
 import {Helmet} from 'react-helmet';
 
 class Game extends Component {
@@ -53,13 +53,15 @@ class Game extends Component {
    
     return (
       
-      <Container className='container'>
-        <Helmet>
-            <style>{'body { background-color: #CEF6CE; }'}</style>
-        </Helmet>
+      // <Container className='container'>
+
 
 
         <Grid divided='vertically'>
+
+        <Helmet>
+            <style>{'body { background-color: #CEF6CE; }'}</style>
+        </Helmet>
 
             {/* Progress Bar */}
             <Grid.Row columns={1} textAlign='center'>
@@ -99,8 +101,6 @@ class Game extends Component {
 
         </Grid>
        
-
-      </Container>
     )
   }
 }

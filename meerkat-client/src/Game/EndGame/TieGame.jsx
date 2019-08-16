@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Container, Header } from 'semantic-ui-react'
+import { Container, Header, Grid, Button } from 'semantic-ui-react'
 import {Helmet} from 'react-helmet';
+import { Link } from 'react-router-dom'
 
 class TieGame extends Component {
     
@@ -15,7 +16,36 @@ class TieGame extends Component {
             <Helmet>
                 <style>{'body { background-color: #CEF6CE; }'}</style>
             </Helmet>
-            <Header size='huge'> Tie Game </Header>
+            
+            <Grid columns='one' divided>
+            <Grid.Row textAlign='center'>
+              <Grid.Column>
+                <Header size='huge'> Tie Game </Header>
+              </Grid.Column>
+            </Grid.Row>
+
+              <Grid.Row textAlign='center'>
+                <Grid.Column>
+                  <Link to={"/game"}>
+                  {<Button className='menu-button' positive size='massive' animated='fade'>
+                    <Button.Content visible>Ready?</Button.Content>
+                    <Button.Content hidden>Begin Game</Button.Content>
+                  </Button>}
+                  </Link>
+                </Grid.Column>
+              </Grid.Row>
+
+              <Grid.Row textAlign='center'>
+                <Grid.Column>
+                  <Link to={"/"}>
+                  {<Button className='menu-button' positive size='massive' animated='fade'>
+                    <Button.Content>Return to Main Menu</Button.Content>
+                  </Button>}
+                  </Link>
+                </Grid.Column>
+              </Grid.Row>
+
+            </Grid>
             
         </Container>
       )
