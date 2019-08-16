@@ -62,8 +62,7 @@ class VoteWinner extends Component {
               </Grid.Column>
 
             </Grid.Row>
-            
-            {/* Input Box */}
+
             <Grid.Row textAlign='center' columns={2}>
             {/* onClick={this.choiceOne()} onClick={this.choiceTwo()}*/}
               <Grid.Column>

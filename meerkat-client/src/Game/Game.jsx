@@ -76,9 +76,8 @@ class Game extends Component {
             </Grid.Row>
             
             {/* Input Box */}
-            <Grid.Row columns={3}>
-              <Grid.Column>
-              </Grid.Column>
+            <Grid.Row columns={1} textAlign='center'>
+
               <Grid.Column>
                 
                 <Dimmer.Dimmable  blurring dimmed={active}>
@@ -95,8 +94,6 @@ class Game extends Component {
 
                 </Dimmer.Dimmable>
 
-              </Grid.Column>
-              <Grid.Column>
               </Grid.Column>
             </Grid.Row>
 

@@ -111,7 +111,6 @@ function timerTick(){
                 answers.push({id:gameRoom.players[1].id, answer:gameRoom.players[1].answer}) 
                 io.to(gameRoom.players[2].id).emit("fetchAnswers", answers) 
 
-                
                 io.to(gameRoom.gameId).emit("updateTimer", gameRoom.timer)
                 io.to(gameRoom.gameId).emit("updateStatus", "voting")
             }
@@ -130,23 +129,29 @@ function timerTick(){
                 io.to(gameRoom.players[0].id).emit('updateStatus', 'won')
                 io.to(gameRoom.players[1].id).emit('updateStatus', 'lost')
                 io.to(gameRoom.players[2].id).emit('updateStatus', 'lost')
+                gameRooms.shift()
+                
             }else if(gameRoom.players[1].votes > gameRoom.players[0].votes && gameRoom.players[1].votes > gameRoom.players[2].votes){
                 //player 2 wins
                 console.log("player 2 won")
                 io.to(gameRoom.players[0].id).emit('updateStatus', 'lost')
                 io.to(gameRoom.players[1].id).emit('updateStatus', 'won')
                 io.to(gameRoom.players[2].id).emit('updateStatus', 'lost')
+                gameRooms.shift()
             }else if(gameRoom.players[2].votes > gameRoom.players[0].votes && gameRoom.players[2].votes > gameRoom.players[1].votes){
                 //player 3 wins
                 console.log("player 3 won")
                 io.to(gameRoom.players[0].id).emit('updateStatus', 'lost')
                 io.to(gameRoom.players[1].id).emit('updateStatus', 'lost')
                 io.to(gameRoom.players[2].id).emit('updateStatus', 'won')
+                gameRooms.shift()
             }else{
                 //tie game
                 console.log("tie game")
                 io.to(gameRoom.gameId).emit('updateStatus', 'tie')
+                // DOESNT FULLY WORK, DONT ADD THIS YET gameRooms.shift()
             }
+
         }    
     })
 }
