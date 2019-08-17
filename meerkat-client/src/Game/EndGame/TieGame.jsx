@@ -10,6 +10,7 @@ class TieGame extends Component {
     this.state = { }
   }
 
+
   render(){
       return(
         <Container textAlign='center'>

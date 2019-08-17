@@ -29,12 +29,12 @@ class Winning extends Component {
 
               <Grid.Row textAlign='center'>
                 <Grid.Column>
-                  <Link to={"/game"}>
-                  {<Button className='menu-button' positive size='massive' animated='fade'>
+
+                  <Button className='menu-button' positive size='massive' animated='fade'>
                     <Button.Content visible>Play Again!</Button.Content>
                     <Button.Content hidden>Begin Game</Button.Content>
-                  </Button>}
-                  </Link>
+                  </Button>
+
                 </Grid.Column>
                 <Grid.Column>
                   <Link to={"/"}>

@@ -28,12 +28,12 @@ class Losing extends Component {
               
               <Grid.Row textAlign='center'>
                 <Grid.Column>
-                  <Link to={"/game"}>
+
                   {<Button className='menu-button' positive size='massive' animated='fade'>
                     <Button.Content visible>Ready?</Button.Content>
                     <Button.Content hidden>Begin Game</Button.Content>
                   </Button>}
-                  </Link>
+
                 </Grid.Column>
               </Grid.Row>
 

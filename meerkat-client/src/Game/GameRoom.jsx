@@ -69,11 +69,11 @@ class GameRoom extends Component {
     }else if(this.state.status === 'finishing'){
       return(<Finishing></Finishing>)
     }else if(this.state.status === 'won'){
-      return(<Winning></Winning>)
+      return(<Winning stauts={this.state.status}></Winning>)
     }else if(this.state.status === 'lost'){
-      return(<Losing></Losing>)
+      return(<Losing stauts={this.state.status}></Losing>)
     }else if(this.state.status === 'tie'){
-      return(<TieGame></TieGame>)
+      return(<TieGame stauts={this.state.status}></TieGame>)
     }
   }
 }
