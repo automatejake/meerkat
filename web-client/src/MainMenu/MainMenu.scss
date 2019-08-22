@@ -1,0 +1,11 @@
+.menu-button{
+  width: 500px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-button{
+    width: 300px;
+    height: 100px;
+  }
+}

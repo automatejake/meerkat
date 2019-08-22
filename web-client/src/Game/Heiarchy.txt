@@ -1,0 +1,33 @@
+Entire game is contained in GameRoom component with single socket.io connection
+
+- socket connection initiated on find game button press
+- socket closed on vote winner or player left
+
+Contained in GameRoom component (route: game)
+
+1. FindGame component
+2. Game component
+3. VoteWinner component
+4. Congrats/Lose component
+5. Main Menu route or FindGame component
+
+
+Server has array of gameroom objects
+
+[
+    gameroom : {
+        gameId: randomlyGenerated,
+        players: [player1, player2, player3],
+        timer: 20,
+        status: waiting, playing, voting, finishing
+    },
+    
+    gameroom : {
+        gameId: randomlyGenerated,
+        players: [player1, player2, player3],
+        timer: 20,
+        status: waiting, playing, voting, finishing
+    }
+]
+
+object deleted on new game
